@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "LoginScreen",
+    "name": "Crud Project",
     "slug": "Final",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -27,12 +27,13 @@
 
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/login.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/crud.png",
+        "backgroundColor": "#ffffff",
+        "softwareKeyboardLayoutMode": "resize"
       },
 
       "edgeToEdgeEnabled": true,
-      "package": "com.kurtyqt10.LoginScreen",
+      "package": "com.kurtyqt10.CrudProject",
 
       "navigationBar": {
         "visible": "immersive",

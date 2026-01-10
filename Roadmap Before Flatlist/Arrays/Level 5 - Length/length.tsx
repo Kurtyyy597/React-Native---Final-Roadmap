@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
 const lightTheme = {
   background: "#F5F5F5",
   surface: "#FFFFFF",
@@ -37,21 +36,19 @@ const darkTheme = {
   cardShadow: "#00000040",
 };
 
-
-export default function ArraysTopic2() {
+export default function ArrayLength() {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const theme = darkMode ? darkTheme : lightTheme;
-  
-  const cars: string[] = ['Lambo', 'Honda', 'Geely', 'Acura'];
+
+  const fruits : string[] = ["Mango", "Apple", "Grapes", "Rambutan"];
 
   return (
     <SafeAreaView style = {[styles.container, {backgroundColor: theme.background}]}>
-      <View style = {[styles.card, {backgroundColor: theme.accent}]}>
-        <Text style = {[styles.title, {color: theme.textPrimary}]}> Arrays of Cars: </Text>
-        <Text style = {[styles.section, {color: theme.textPrimary}]}> 1. {cars[0]} </Text>
-        <Text style = {[styles.section, {color: theme.textPrimary}]}> 2. {cars[1]} </Text>
-        <Text style = {[styles.section, {color: theme.textPrimary}]}> 3. {cars[2]} </Text>
-        <Text style = {[styles.section, {color: theme.textPrimary}]}> 4. {cars[3]} </Text>
+      <View style = {[styles.card, {backgroundColor: theme.success}]}>
+        <Text style = {[styles.textTitle, {color: theme.textPrimary}]}> Arrays Usage of Length </Text>
+        <Text style = {[styles.textSection, {color: theme.textPrimary}]}> Fruit length: {fruits.length} </Text>
+        <Text style = {[styles.textSection, {color: theme.textPrimary}]}> Last Item of fruits: {fruits[fruits.length-1]} </Text>
+        
       </View>
     </SafeAreaView>
   )
@@ -60,10 +57,11 @@ export default function ArraysTopic2() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
 
   card: {
+    alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
@@ -74,18 +72,17 @@ const styles = StyleSheet.create({
     margin: 30,
     padding: 30,
     borderRadius: 20
-
   },
 
-  title: {
-    fontSize: 28,
+  textTitle: {
+    fontSize: 30,
     textAlign: 'center',
     fontWeight: 'bold'
   },
 
-  section: {
+  textSection: {
     fontSize: 24,
     textAlign: 'center',
-    fontStyle: 'italic'
+    fontWeight: '400'
   }
 })
