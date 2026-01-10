@@ -68,7 +68,7 @@ type Student = {
   lastName: string;
   maidenName?: string;
   age: number;
-  birthDate: number;
+  birthDate: string;
   gender: string;
   contact: {
     email: string;
@@ -126,7 +126,7 @@ const RenderItem = ({student, onAction, theme, isSelected}: StudentItemProps) =>
         </View>
         <View style = {[styles.infoRow, {backgroundColor: theme.inputBackground}]}>
           <Text style = {[styles.textLabel, {color: theme.textPrimary}]}> legal Maiden Name: </Text>
-          <Text style = {[styles.textContent, {color: theme.textPrimary}]}> {student.maidenName} </Text>
+          <Text style = {[styles.textContent, {color: theme.textPrimary}]}> {student.maidenName ?? "N/A"} </Text>
         </View>
         <View style = {[styles.infoRow, {backgroundColor: theme.inputBackground}]}>
           <Text style = {[styles.textLabel, {color: theme.textPrimary}]}> Age: </Text>

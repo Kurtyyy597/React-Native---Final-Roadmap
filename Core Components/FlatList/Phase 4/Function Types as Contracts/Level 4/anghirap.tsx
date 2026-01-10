@@ -238,7 +238,7 @@ export default function SobrangDaliLang() {
             }
           ]
         )
-        return {ok: true, selectedId: action.payload.id}
+        return {ok: true}
       }
       default: {
         const _never: never = action;

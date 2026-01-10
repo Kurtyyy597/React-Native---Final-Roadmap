@@ -329,7 +329,7 @@ export default function FunctionTypesWithAdding() {
                     }
                     return prev - 1
                   })
-                })
+                }, 1000);
               }
             }
           ]

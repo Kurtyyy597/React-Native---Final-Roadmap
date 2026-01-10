@@ -301,6 +301,8 @@ export default function FunctionTypeContractsCheating() {
   };
 
   const addStudent: AddStudentFn = () => {
+    if (loading) return;
+    
     const newStudent : Student = {
       id: Date.now(),
       name: "Lolito Mondragon",

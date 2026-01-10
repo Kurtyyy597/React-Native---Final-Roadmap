@@ -43,6 +43,8 @@ export default function DarkmodeandLightmodewithDropdown() {
   const [openDropdown, setOpenDropdown] = useState<boolean>(false);
   const theme = themeMode === "dark" ? darkTheme : lightTheme;
 
+  
+
   return (
     <SafeAreaView style = {[styles.container, {backgroundColor: theme.background}]}>
        <Pressable
