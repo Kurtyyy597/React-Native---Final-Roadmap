@@ -125,7 +125,7 @@ type FetchStudentFn = () => Promise<Result<Student[]>>;
 
 const fetchStudentApi : FetchStudentFn = async () => {
   try {
-    const response = await fetch("https://dummyjson.com/urs");
+    const response = await fetch("https://dummyjson.com/users");
 
     if (!response.ok) {
       return {ok: false, error: "Failed to load students"}

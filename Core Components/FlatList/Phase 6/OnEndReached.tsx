@@ -366,10 +366,7 @@ export default function OnEndReached() {
       ListEmptyComponent={empty}
       ItemSeparatorComponent={separator}
       onEndReached={loadMoreUsers}
-      onEndReachedThreshold={0.4}
-    
-     
-      />
+      onEndReachedThreshold={0.4}/>
     </SafeAreaView>
   )
 };
