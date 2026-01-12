@@ -4,7 +4,10 @@ import React, { useEffect, useState } from "react";
 
 // SAFE AREA PROVIDER (required!)
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import FinalFunctionButiNaman from "./Core Components/FlatList/Phase 4/Function Types as Contracts/Level 6 - Final/Final";
+import OnEndReached from "./Core Components/FlatList/Phase 6/OnEndReached";
+//import PullToRefreshBitch from "./Core Components/FlatList/Phase 6/PullToRefresh";
+//import SearchFlatList from "./Core Components/FlatList/Lesson 4 - Search FlatList/SearchFlatList";
+//import FinalFunctionButiNaman from "./Core Components/FlatList/Phase 4/Function Types as Contracts/Level 6 - Final/Final";
 //import MasMahirap from "./Core Components/FlatList/Phase 4/Function Types as Contracts/Level 5/masmahirap";
 //import SobrangDaliLang from "./Core Components/FlatList/Phase 4/Function Types as Contracts/Level 4/anghirap";
 //import AsyncWithPagination from "./Core Components/FlatList/Phase 4/Function Types as Contracts/Level 3 - Async/withPagination";
@@ -172,7 +175,7 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <StatusBar hidden /> 
-      <FinalFunctionButiNaman>
+      <OnEndReached/>
     </SafeAreaProvider>
   );
 }

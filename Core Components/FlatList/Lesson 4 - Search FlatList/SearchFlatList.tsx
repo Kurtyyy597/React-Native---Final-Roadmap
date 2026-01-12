@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef, useEffect, useMemo} from 'react';
 import {View, Text, FlatList, Pressable, BackHandler, StyleSheet, TextInput, Keyboard } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -90,7 +90,7 @@ export default function SearchFlatList() {
 
     if (!value) {
         inputRef.current?.blur();
-          setIsFocused(false);
+        setIsFocused(false);
       setQuery("");
       Keyboard.dismiss();
       return;
@@ -102,13 +102,20 @@ export default function SearchFlatList() {
     Keyboard.dismiss();
   };
 
-  const filtered = students.filter(s => 
-    s.name.trim().toLowerCase().includes(query) ||
-    s.section.trim().toLowerCase().includes(query) ||
-    s.age >= 39
-  );
   
-useEffect(() => {
+const filtered = useMemo(() => {
+  const normalizedQuery = query.trim().toLowerCase();
+
+  return students.filter(student => {
+    return (
+      student.name.toLowerCase().includes(normalizedQuery) ||
+      student.section.toLowerCase().includes(normalizedQuery) ||
+      student.age >= 39 
+    );
+  });
+}, [students, query]);
+  
+  useEffect(() => {
   const hideSub = Keyboard.addListener("keyboardDidHide", () => {
     inputRef.current?.blur(); // 👈 THIS removes cursor
   });
